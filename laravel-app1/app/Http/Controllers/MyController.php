@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 
 class MyController extends Controller
 {
-    function mycontroller()
+    function index()
     {
-        return "This is my custom controller";
+        return "This is my index controller";
+    }
+
+    public function show() {
+        return "This is custom show controller";
     }
 }

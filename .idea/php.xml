@@ -129,9 +129,10 @@
       <path value="$PROJECT_DIR$/laravel-app1/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/laravel-app1/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/laravel-app1/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/laravel-app1/vendor/_laravel_idea" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.5">
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.2">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>
   <component name="PhpStanOptionsConfiguration">
