@@ -96,3 +96,29 @@ Route::get('/newview3', function () {
 Route::get('/newview4/{name}', function ($name) {
     return view('newview', compact('name'));
 });
+
+// Using withName()
+Route::get('/newview5', function () {
+    $name = "Raj";
+    $add = "B.H.01";
+    return view('/newview')->withName($name)->withAdd($add);
+});
+
+
+// Named Route
+
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/aboutus', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/contact', function () {
+    return view('contact');
+});
