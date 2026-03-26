@@ -25,8 +25,8 @@ Route::get('/param/{id}', function ($id) {
     return "<h1> User id is $id";
 });
 
-Route::get('/param/{id1}/{id2}', function ($id1, $id2) {
-    return "<h1> User id is $id1 and $id2</h1>";
+Route::get('/param/{id}/{name}', function ($id, $name) {
+    return "<h1>My name is $name and Regestration number is $id</h1>";
 });
 
 // Optional Parameter
@@ -71,7 +71,7 @@ Route::get('/table/{num}', function ($num) {
     Passing data to the views
 
     1ST METHOD :: Arrays -> Associative Arrays as a ['key': 'value'] pair
-    2ND METHOD :: with('var_name', 'value') -> as a var_name and it's value pair
+    2ND METHOD :: with('var_name', 'value') -> as a var_name, and it's value pair
     3RD METHOD :: compact($var1, $var2, $var3) -> multiple parameter
     4TH METHOD :: withName() -> like withAddress($address) and use camel case to define this methods name.
 */
@@ -121,4 +121,26 @@ Route::get('/aboutus', function () {
 
 Route::get('/contact', function () {
     return view('contact');
+});
+
+
+// Blade practice
+Route::get('/bladepractice/{word}', function ($word) {
+    return view('bladepractice', compact('word'));
+});
+
+// Practice
+Route::get('studentdetails/', function () {
+    $details = ["student1"=> ["id"=>"101", "name"=>"Raj"], "student2"=> ["id"=>"102", "name"=>"Mayank"], "student3"=>
+        ["id"=>"103", "name"=>"Raushan"]];
+    return view('practice', compact('details'));
+});
+
+Route::get('studentdetails/{id}', function ($id) {
+
+    $details = ["student1"=> ["id"=>"101", "name"=>"Raj"],
+                "student2"=> ["id"=>"102", "name"=>"Mayank"],
+                "student3"=> ["id"=>"103", "name"=>"Raushan"]];
+
+    return view('practice', compact('details', 'id'));
 });
